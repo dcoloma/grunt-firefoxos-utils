@@ -1,0 +1,35 @@
+{
+  "name": "grunt-firefoxos-utils",
+  "description": "Firefox OS grunt utils",
+  "version": "0.1.0",
+  "homepage": "https://github.com/dcoloma/grunt-firefoxos-utils",
+  "contributors": [
+    "Daniel Coloma (https://github.com/dcoloma)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dcoloma/grunt-firefoxos-utils.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache V2.0"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "node-firefoxos-utils": "git://github.com/dcoloma/node-firefoxos-utils"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.1.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
