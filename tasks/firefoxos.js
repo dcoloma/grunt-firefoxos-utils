@@ -20,7 +20,7 @@ module.exports = function (grunt) {
     });
   });
 
-  grunt.registerMultiTask('ffosgetprefs', 'Get FirefoxOS prefs file', function () {
+  grunt.registerTask('ffosgetprefs', 'Get FirefoxOS prefs file', function () {
     var done = this.async();
     ffos.pullPrefs(function onRead(error, data){
       if (error != null)
@@ -31,7 +31,7 @@ module.exports = function (grunt) {
     });
   });
 
-  grunt.registerMultiTask('ffossetprefs', 'Set FirefoxOS prefs file', function () {
+  grunt.registerTask('ffossetprefs', 'Set FirefoxOS prefs file', function () {
     var done = this.async();
     ffos.pushPrefs(function onRead(error, data){
       if (error != null)
