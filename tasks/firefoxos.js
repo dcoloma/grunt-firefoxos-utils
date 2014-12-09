@@ -41,5 +41,23 @@ module.exports = function (grunt) {
       done();
     });
   });
+
+  grunt.registerTask('checkRemoteDebug', function(){
+    var prefs = grunt.file.read("prefs.js");
+
+    if (prefs.indexOf("devtools.debugger.prompt-connection") == -1) {
+      console.log("pref does not exist");
+      // Does not exist, need to add
+      prefs += 'user_pref("devtools.debugger.prompt-connection", false);';
+    } else if (prefs.indexOf('"devtools.debugger.prompt-connection", true') > -1) {
+      // exists but true, add to true
+      console.log("pref is true");
+      prefs.replace('prompt-connection", true', 'prompt-connection", false')
+    }
+    else {
+      console.log("pref is false");
+    }
+    grunt.file.write("prefs.js", prefs);
+  });
 };
 
